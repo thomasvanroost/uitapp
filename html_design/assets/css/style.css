@@ -1,0 +1,15 @@
+/*
+We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+However, this blank file is available if you prefer
+*/
+.navbar{
+	background-color: #0982ae;
+}
+
+.btn.dans{
+	background-color: #ff00bb;
+}
+
+.btn.fuif{
+	background-color: #00bbff;
+}
