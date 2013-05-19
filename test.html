@@ -1,0 +1,31 @@
+
+<script> 
+if (navigator.geolocation) {
+  var timeoutVal = 10 * 1000 * 1000;
+  navigator.geolocation.getCurrentPosition(
+    displayPosition, 
+    displayError,
+    { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+  );
+}
+else {
+  alert("Geolocation is not supported by this browser");
+}
+
+function displayPosition(position) {
+  alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+}
+
+function displayError(error) {
+  var errors = { 
+    1: 'Permission denied',
+    2: 'Position unavailable',
+    3: 'Request timeout'
+  };
+  alert("Error: " + errors[error.code]);
+}
+
+</script>
+
+<!-- AUTO reload script livereload -->
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 		'script>')</script>
